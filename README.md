@@ -1,5 +1,5 @@
 # Customer-Data-Insights-Power-BI--Dashboard
-In this project I have used a dataset on a customer transactions for different products which I will analyse this data and build a Power BI Dashboard.
+In this project I have used two datasets on transactions made by customers for different products which I will analyse this data and build an insightful Power BI Dashboard.
 
 # 📊 Power BI Project Setup and Data Transformation Guide
 
@@ -103,3 +103,10 @@ You can insert multiple pages and mix visuals as needed.
 ### 🏁 End of Guide
 
 > 🎯 **Tip:** Always save your Power BI file frequently and document each transformation step for reproducibility.
+
+
+### Appendix
+
+<img width="1918" height="1078" alt="1" src="https://github.com/user-attachments/assets/6de1b2cc-11cf-4487-92eb-567b797f8979" />
+
+https://github.com/user-attachments/assets/ec3a360a-99ae-4601-abfd-436b5bc1f13b
