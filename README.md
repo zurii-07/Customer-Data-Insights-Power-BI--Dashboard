@@ -1,43 +1,105 @@
 # Customer-Data-Insights-Power-BI--Dashboard
 In this project I have used a dataset on a customer transactions for different products which I will analyse this data and build a Power BI Dashboard.
 
-1. Open Power BI Desktop and create a new project by clicking "blank report".
-2. Rename the project as you like and give its location to a new folder.
-3. Add the data files which you are going to make insights from to that folder.
-4. Comeback to the Power BI interface and click "Get data from another source".
-5. Now you will have the ability to upload any type of file. Upload the files one after the other choosing the correct format.
-6. In my case, I uploaded one excel file, transformed it before loading it. and did the other file in .txt format the same procedure.
-7. You can also do the method, upload the two data files first, load them and finally transform them one by one.
+# 📊 Power BI Project Setup and Data Transformation Guide
 
-So let's continue with my approach to the project. 
-First with transformation of data in the Text data file:
+## 🧩 Project Initialization
 
-8. Text Data (Invoice Data) File Transformation.
+1. **Open Power BI Desktop** and create a new project by selecting **“Blank Report.”**
+2. **Rename** the project as you like and **save** it in a **new folder** (this keeps all files organized).
+3. **Add the data files** you plan to analyze to that same folder.
+4. Return to the Power BI interface and click **“Get Data from Another Source.”**
+5. You can now upload any type of file (Excel, CSV, Text, JSON, etc.).
+6. In this example:
+   - One **Excel file** and one **Text (.txt)** file were uploaded.
+   - Each file was **transformed before loading** into Power BI.
+7. *(Alternative method)* — You may also load both files first and then perform transformations one by one.
 
-⦁	Change the "Sales" column's data type from "Integer" to "Fixed Decimal Number" to show it as a currency,
-⦁	Merge Year, Month, Day columns by selecting them using Ctrl + Select the columns, command then merged them into one as "Date". (Separator should be /, New Column Name = Date)
-⦁	Change the data type of new "Date" column into Date.
+---
 
-Secondly the transformation of data in Excel data file:
+## 🧮 Data Transformation Steps
 
-9. Excel Data (Customer Data) File Transformation.
+### 🔹 1. Text Data (Invoice Data) Transformation
 
-⦁	Select the "CityProvince" column and split the column by delimiter. Choose custom and '('. Split at: left-most delimiter and click OK. Rename the first column as "City" and the next as "Province". In the new "Province" column replace '(' with nothing.
-⦁	Remove Columns that don't need for the insights such as customer email, telephone number, address etc. Go to choose columns in Home --> manage columns tab and untick the not needed columns and click OK.
+Perform the following steps for the text data file:
 
-10. Transformations for both files are done. Click close and apply.
+- Change the **"Sales"** column data type from **Integer** ➜ **Fixed Decimal Number** to display it as a currency.
+- Merge the **Year**, **Month**, and **Day** columns:
+  - Select all three columns while holding **Ctrl**.
+  - Use the **Merge Columns** command.
+  - Set the **Separator** to `/` and the **New Column Name** to `Date`.
+- Change the data type of the new **Date** column to **Date** format.
 
-11. In Power BI we don't merge tables. Power BI auto detects new relationships between tables when data is loaded.
-    In this project:
-⦁	Fact Table is Invoice Data
-⦁	Lookup Table is Master Customer Data
+---
 
-12. Now create insights by clicking Visualizations tab and selecting what features you need to compare from each table's columns and you are done. You can insert any number of pages.
-e.g.:
-⦁	Insert Chart with Slicer
-⦁	Insert Tables with Quick Measures
-⦁	Insert Map Chart
-⦁	Insert Line Chart
-⦁	Add KPI Chart to Dashboard
+### 🔹 2. Excel Data (Customer Data) Transformation
 
-13. All are done. Lastly save and publish your report on web and share the report with others.
+Perform the following steps for the Excel data file:
+
+- Select the **"CityProvince"** column and **split it by a custom delimiter**:
+  - Navigate to *Split Column → By Delimiter → Custom ('(')*  
+  - Split at the **Left-most delimiter** and click **OK**.
+  - Rename the first new column to **City** and the second to **Province**.
+  - In the **Province** column, replace `'('` with an empty string (`""`).
+- **Remove unnecessary columns** such as email, telephone number, address, etc.:
+  - Go to **Home → Manage Columns → Choose Columns**.
+  - Untick the unneeded columns and click **OK**.
+
+---
+
+## ✅ Finalizing Transformations
+
+- Once both transformations are completed, click **Close & Apply**.
+- Power BI will automatically **detect relationships** between tables.
+
+---
+
+## 🧱 Data Model Structure
+
+In this project:
+
+| Table Type | Table Name |
+|-------------|-------------|
+| Fact Table | Invoice Data |
+| Lookup Table | Customer Master Data |
+
+---
+
+## 📈 Creating Insights and Visualizations
+
+Use the **Visualizations** panel to create insights from both tables.  
+You can insert multiple pages and mix visuals as needed.
+
+**Recommended Visuals:**
+- 📊 Chart with Slicer  
+- 📋 Table with Quick Measures  
+- 🗺️ Map Chart  
+- 📉 Line Chart  
+- 📍 KPI Chart (for dashboard insights)
+
+---
+
+## 🚀 Publishing the Report
+
+1. After completing all visuals, **save your project**.
+2. Click **Publish** to upload your report to the Power BI Service.
+3. **Share your report** on the web or with team members via Power BI dashboard access.
+
+---
+
+## 🧾 Summary of Steps
+
+| Step | Description |
+|------|--------------|
+| 1–3 | Project setup and data preparation |
+| 4–7 | Importing data into Power BI |
+| 8–10 | Data cleaning and transformation |
+| 11 | Relationship setup (Fact & Lookup Tables) |
+| 12 | Visualization creation |
+| 13 | Publishing and sharing report |
+
+---
+
+### 🏁 End of Guide
+
+> 🎯 **Tip:** Always save your Power BI file frequently and document each transformation step for reproducibility.
